@@ -1,0 +1,1 @@
+/* represents an item inside the shopping cart */
