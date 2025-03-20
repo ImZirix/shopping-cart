@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 /* Diplays basic homepage content */
 function Home() {
   return (
-    <section className="text-center py-16 bg-gray-100">
-      <h1 className="text-4xl font-bold mb-4">Welcome to Croissant Shop</h1>
+    <section className="text-center py-16 m-t bg-gray-100 min-h-[calc(100vh-7rem)]">
+      <h1 className="text-4xl font-bold mb-4 mt-20">
+        Welcome to Croissant Shop
+      </h1>
       <p className="text-lg text-gray-600 mb-6">
         Your one-stop shop for amazing products.
       </p>
