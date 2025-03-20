@@ -1,8 +1,9 @@
-import { useOutletContext } from "react-router-dom";
+import { useContext } from "react";
 import { X } from "lucide-react";
+import { CartContext } from "../App";
 /* Show all cart items and checkout button */
 function Cart() {
-  const { cart, removeFromCart } = useOutletContext();
+  const { cart, removeFromCart } = useContext(CartContext);
   const totalPrice = cart
     .reduce((total, item) => total + item.price, 0)
     .toFixed(2);

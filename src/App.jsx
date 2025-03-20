@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import { useState } from "react";
+import { useState, createContext } from "react";
+export const CartContext = createContext();
 function App() {
   const [cart, setCart] = useState([]);
   const addToCart = (product) => {
@@ -10,11 +11,11 @@ function App() {
     setCart(cart.filter((_, i) => i !== index));
   };
   return (
-    <>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
       <Navbar cartCount={cart.length} />
-      <Outlet context={{ addToCart, cart, removeFromCart }} />
+      <Outlet />
       <div></div>
-    </>
+    </CartContext.Provider>
   );
 }
 
