@@ -13,6 +13,7 @@ function App() {
     <>
       <Navbar cartCount={cart.length} />
       <Outlet context={{ addToCart, cart, removeFromCart }} />
+      <div></div>
     </>
   );
 }
